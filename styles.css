@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin-bottom: 3em;
+    background-color: #34495e;
+    padding: 0 1em;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
+    position:fixed;
+    width:98%;
+    z-index: 3;
+ }
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* sidebar */
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s;
+    z-index: 5;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+.sidebar a:hover {
+    background-color: #34495e;
+  }
+
+.sidebar .active a {
+    background-color: #34495e;
+  }
+
+/* Sidebar Toggle Button */
+#sidebar-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+#sidebar-toggle:focus {
+    outline: none;
+}
+
+#sidebar-toggle {
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+main {
+    padding-top: 90px;
+}
+
+/* Dashboard Overview */
+.dashboard-overview {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.metric {
+    flex: 1;
+    background-color: #3498db;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 1em;
+}
+
+.metric h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.metric p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Performance Trends */
+.performance-trends {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .performance-trends h2 {
+    margin-bottom: 10px;
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .bar {
+    flex: 1;
+    background-color: #3498db;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    margin: 0 1em;
+  }
+  
+/* Control Panel */
+.control-panel {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.control-panel h2 {
+    margin-bottom: 10px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.setting {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+.setting label {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 50px;
+    
+}
+
+.setting input[type="range"] {
+    width: 50%;
+    margin-left: 3em;
+    margin-right: .5em;
+}
+
+.setting .value {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Real-time Insights */
+.real-time-insights {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.real-time-insights h2 {
+    margin-bottom: 10px;
+}
+
+.data-stream {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.data-stream div{
+    margin: 0 1em;
+}
+
+.input,
+.output {
+    flex: 1;
+    padding: 15px;
+    height: 10em;
+    background-color: #3498db;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.data-stream h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+
+    .chart-container{
+        width: auto;
+        overflow: auto;
+    }
+
+    .sidebar {
+        width: 40%;
+        margin: 0 .5em;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    
+    .metrics{
+        display: inline;
+    }
+
+    .bar{
+        margin: 0 .2em;
+    }
+    
+    .metric{
+        margin: 0 auto;
+        margin-top: 1em;
+        margin-bottom: .5em;
+        width: 200px;
+    }
+
+}
